@@ -14,17 +14,29 @@
     background: url(images/bgimg.png);
     height: 500px;
     background-size: 100% 100%;
-}  
+} 
+.color{
+    color: #94c75e;
+} 
 .lo{
     margin-top: -5px;
 } 
 .gb{
     margin-left: 20px;
 }
+.img2{
+    width: 500px;
+}
+.w-100{
+    width: 100%;
+}
 .ob{
     border: none;
     background: transparent;
     color: white;
+}
+p{
+    margin: 0;
 }
 .search{
     border-radius: 0px 6px 6px 0px;
@@ -35,7 +47,7 @@
     height: 60%;
 }
 .container{
-    width: 1024px;
+    width: 1200px;
 }
 .container-1{
     width: 680px;
@@ -50,9 +62,163 @@
     height: 20px;
     width: 20px;
 }
+
 .body-con{
+    width: 650px;
+}
+.butt{
+    height: 40px;
+    width: 200px;
+}
+.img3{
+    height: 200px;
+    width: 200px;
+}
+.fet1{
+    background: url(images/holt.jpg);
+    background-size: 100% 100%;
+}
+.fet3{
+    background: url(images/holly.jpg);
+    background-size: 100% 100%;
+}
+.fet4{
+    background: url(images/east.jpg);
+    background-size: 100% 100%;
+}
+.btn-or{
+    background-color: rgb(255, 81, 0);
+    color: white;
+}
+.btn-or:hover{
+    background-color: rgb(255, 81, 0);
+    color: white;
+}
+.fet{
+    width: 170px;
+    height: 200px;
+}
+.fet2{
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    padding: 10px;
+  }
+  .fet2::before {
+    position: absolute;
+    background: orangered;
+    height: 3px;
+    content: "";
+    width: 80px;
+    bottom: -2px;
+    left: 40%;
+  }
+  .btn-br{
+    background-color: brown;
+    color: white;
+  }
+  .btn-br:hover{
+    background-color: brown;
+    color: white;
+  }
+  .content{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    height: 300px;
     width: 600px;
-}
-.body-img{
-    width: 400px;
-}
+  }
+  .cave{
+    height: 418px;
+    width: 780px;
+    background: url(images/cave.jpg);
+    background-size: 100% 100%;
+  }
+  .ind{
+    height: 200px;
+    width: 370px;
+  }
+  .ind1{
+    height: 250px;
+    width: 550px;
+  }
+  .fs-12{
+    font-size: 13px;
+  }
+  .op{
+    height:60px;
+    overflow: hidden;
+  }
+  label{
+    color: white;
+    border-radius: 3px;
+  }
+  .bg-gr{
+    background-color: #94c75e;
+  }
+  .bg-mr{
+    background-color: lightsalmon;
+  }
+  .img4{
+    height: 200px;
+    width: 300px;
+  }
+  .img5{
+    height: 200px;
+    width: 270px;
+  }
+  .con1{
+    height: 430px;
+    width: 370px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .h1-100{
+    margin-top: 100px;
+    border: none;
+    border-radius: 6px;
+  }
+  .foot{
+    background-color: #fff;
+    color: black;
+    height: 250px;
+  }
+  .in{
+    border:1px solid gray;
+    height: 30px;
+    width:350px;
+    background-color:aliceblue;
+  }
+  .ul{
+    list-style: none;
+  }
+  .con2{
+    width: 370px;
+  }
+  .hr {
+    background-color: grey;
+    height: 1px;
+    width: 100%;
+    position: relative;
+  }
+  .hr::before {
+    position: absolute;
+    background: orangered;
+    height: 3px;
+    content: "";
+    width: 50px;
+    bottom: -1px;
+  }
+  .hl {
+    background-color: grey;
+    height: 1.5px;
+    width: 100%;
+  }
+  .img6{
+    height: 75px;
+    width: 100px;
+  }
+  .end{
+    height: 100px;
+  }
+  .call{
+    text-decoration: none;
+    color: white;
+  }
