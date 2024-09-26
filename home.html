@@ -8,6 +8,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -82,7 +83,7 @@
                 investment opportunity!
               </p>
             </div>
-            <div class="row mt-2 mb-2 align-items-center">
+            <div class="row mt-2 p-2 align-items-center">
               <input
                 type="text"
                 class="form-control-sm col-md-6"
@@ -189,7 +190,7 @@
             <button class="btn btn-outline-success mt-3">
               View All Listings
             </button>
-            <div class="row col-md-12 mt-3 gap-3 justify-content-between">
+            <div class="row col-12 mt-3 gap-3 justify-content-around">
               <div class="col-md-4 row">
                 <div class="fet1 col-lg-6 p-2">
                   <button class="btn btn-success">RV and Campground</button>
@@ -243,7 +244,9 @@
               class="d-flex flex-column justify-content-between mt-3 w-100 gap-3"
             >
               <div class="row">
-                <div class="cave col-md-8 d-flex justify-content-center align-items-center">
+                <div
+                  class="cave col-md-8 d-flex justify-content-center align-items-center"
+                >
                   <div
                     class="content d-flex justify-content-center align-items-center"
                   >
@@ -324,7 +327,9 @@
                 <div class="col-md-4 p-3">
                   <div class="border border-dark-subtle p-3">
                     <label class="fs-12 bg-danger p-1">Development news</label>
-                    <h5 class="ind mt-3">River Camp RV Parks Opens in Meeker,CO</h5>
+                    <h5 class="ind mt-3">
+                      River Camp RV Parks Opens in Meeker,CO
+                    </h5>
                     <p class="ind1 fs-12">
                       James Ledford and Amy Sanger Ledford are the new owners of
                       River Camp RV Park and celebrated with a grand opening.
@@ -361,42 +366,50 @@
             <div class="row">
               <div class="cl col-md-4">
                 <div class="card">
-                  <img src="images/Camp.jpg" class="card-img-top" alt="...">
+                  <img src="images/Camp.jpg" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">CampSpot</h5>
-                    <p class="card-text">CampSpot is campground reservation software that empowers
-                      campgroud owners to grow their businesses, while delivering
-                      a modern online booking experiences for guests. Created by
-                      campground owners for campground owners campspot is setting
-                      the standard...<a class="color">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="cl col-md-4">
-                <div class="card">
-                  <img src="images/total.jpeg" class="card-img-top p-5" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title mt-4">Total Restroom</h5>
                     <p class="card-text">
-                      When you work with Total Restroom on your next project, you
-                      will be with Experts - Project Managers who focus only on
-                      bathroom stall dividers and commercial restrooms everyday.
-                      We work on projects of all sizes and all budgets. From the
-                      sma...<a class="color">Read More</a>
+                      CampSpot is campground reservation software that empowers
+                      campgroud owners to grow their businesses, while
+                      delivering a modern online booking experiences for guests.
+                      Created by campground owners for campground owners
+                      campspot is setting the standard...<a class="color"
+                        >Read More</a
+                      >
                     </p>
                   </div>
                 </div>
               </div>
               <div class="cl col-md-4">
                 <div class="card">
-                  <img src="images/tenant.png" class="card-img-top" alt="...">
+                  <img
+                    src="images/total.jpeg"
+                    class="card-img-top p-5"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title mt-4">Total Restroom</h5>
+                    <p class="card-text">
+                      When you work with Total Restroom on your next project,
+                      you will be with Experts - Project Managers who focus only
+                      on bathroom stall dividers and commercial restrooms
+                      everyday. We work on projects of all sizes and all
+                      budgets. From the sma...<a class="color">Read More</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="cl col-md-4">
+                <div class="card">
+                  <img src="images/tenant.png" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">TenantMagic</h5>
                     <p class="card-text">
-                        TenantMagic provides online tenant applications with the
+                      TenantMagic provides online tenant applications with the
                       most comprehensive tenant application screening report
-                      available to property managers and owners. Our online rental
-                      application and background check is based on latest
+                      available to property managers and owners. Our online
+                      rental application and background check is based on latest
                       technology but powered...<a class="color">Read More</a>
                     </p>
                   </div>
@@ -413,26 +426,95 @@
             Stay up-to-date on new listings,industry news, market insights,
             interviews and more!
           </p>
-          <div class="foot w-100 mt-3 p-4">
-            <div class="row mb-5">
-              <div class="col-md-4">
-                <label class="text-black row">First name</label>
-                <input class="form-control mt-2 rounded-4 in row" type="text" />
+          <form class="w-100" name="myform" id="form" action="/">
+            <div class="foot mt-3 p-4">
+              <div class="row mb-1">
+                <div class="col-md-4">
+                  <label class="text-black row">First name</label>
+                  <input
+                    class="form-control mt-2 rounded-4 in row"
+                    id="fname"
+                    autocomplete="off"
+                    maxlength="15"
+                    name="fname"
+                    type="text"
+                    required
+                  />
+                  <span id="fname-error" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                  <label class="text-black row">Last name</label>
+                  <input
+                    class="form-control mt-2 rounded-4 in row"
+                    id="lname"
+                    autocomplete="off"
+                    maxlength="15"
+                    name="lname"
+                    type="text"
+                    required
+                  />
+                  <span id="lname-error" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                  <label class="text-black">Email</label>
+                  <input
+                    class="form-control mt-2 rounded-4 in row"
+                    id="email"
+                    autocomplete="off"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                  <span id="mail-error" class="text-danger"></span>
+                </div>
               </div>
-              <div class="col-md-4">
-                <label class="text-black row">Last name</label>
-                <input class="form-control mt-2 rounded-4 in row" type="text" />
+              <div class="row mb-4">
+                <div class="col-md-4">
+                  <label class="text-black row">Phone Number</label>
+                  <input
+                    class="form-control mt-2 rounded-4 in row"
+                    id="number"
+                    autocomplete="off"
+                    maxlength="10"
+                    name="Number"
+                    type="tel"
+                    required
+                  />
+                  <span id="num-error" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                  <label class="text-black row">Address</label>
+                  <textarea
+                    class="mt-2 rounded-4 row fb p-2"
+                    id="address"
+                    autocomplete="off"
+                    name="Address"
+                    type="text"
+                    required
+                  ></textarea>
+                  <span id="add-error"></span>
+                </div>
+                <div class="col-md-4">
+                  <label class="text-black row">Feedback</label>
+                  <textarea
+                    class="mt-2 rounded-4 row fb p-2"
+                    id="feedback"
+                    autocomplete="off"
+                    name="Feedback"
+                    type="text"
+                    required
+                  ></textarea>
+                  <span id="fb-error"></span>
+                </div>
               </div>
-              <div class="col-md-4">
-                <label class="text-black">Email</label>
-                <input class="form-control mt-2 rounded-4 in row" type="email" />
-              </div>
-            </div>
 
-            <div class="row justify-content-end pe-3 pt-5">
-              <button class="btn btn-or col-2 or">SIGN ME UP!</button>
+              <div class="row justify-content-end pe-3 pt-5">
+                <button class="btn btn-or col-2 or" type="submit" onclick="validate()">
+                  SIGN ME UP!
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
           <div class="row justify-content-between w-100">
             <div class="col-md-4 mt-3">
               <h4>CONTACT US</h4>

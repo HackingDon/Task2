@@ -184,6 +184,13 @@ p{
     text-decoration: none;
     color: white;
   }
+  .fb{
+    min-height: 40px;
+    height:auto;
+    width: 100%;
+    border:1px solid gray;
+    background-color:aliceblue;
+  }
   @media (min-width: 992px){
     .form-control-sm{
       width: 400px;
@@ -248,5 +255,8 @@ p{
     .end,
     .tc{
       text-align: center;
+    }
+    .nav-item{
+      padding-left: 10px;
     }
   }
