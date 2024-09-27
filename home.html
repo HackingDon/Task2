@@ -426,7 +426,7 @@
             Stay up-to-date on new listings,industry news, market insights,
             interviews and more!
           </p>
-          <form class="w-100" name="myform" id="form" action="/">
+          <form class="w-100" id="form" onsubmit="return validate()">
             <div class="foot mt-3 p-4">
               <div class="row mb-1">
                 <div class="col-md-4">
@@ -490,7 +490,7 @@
                     autocomplete="off"
                     name="Address"
                     type="text"
-                    required
+                     required
                   ></textarea>
                   <span id="add-error"></span>
                 </div>
@@ -509,7 +509,7 @@
               </div>
 
               <div class="row justify-content-end pe-3 pt-5">
-                <button class="btn btn-or col-2 or" type="submit" onclick="validate()">
+                <button class="btn btn-or col-2 or" type="submit">
                   SIGN ME UP!
                 </button>
               </div>
