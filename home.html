@@ -434,11 +434,12 @@
                   <input
                     class="form-control mt-2 rounded-4 in row"
                     id="fname"
+                    onkeypress="return isAlphaKey(event)"
                     autocomplete="off"
                     maxlength="15"
                     name="fname"
                     type="text"
-                    required
+                  
                   />
                   <span id="fname-error" class="text-danger"></span>
                 </div>
@@ -447,14 +448,31 @@
                   <input
                     class="form-control mt-2 rounded-4 in row"
                     id="lname"
+                    onkeypress="return isAlphaKey(event)"
                     autocomplete="off"
                     maxlength="15"
                     name="lname"
                     type="text"
-                    required
+                  
                   />
                   <span id="lname-error" class="text-danger"></span>
                 </div>
+                <div class="col-md-4">
+                  <label class="text-black row">Phone Number</label>
+                  <input
+                    class="form-control mt-2 rounded-4 in row"
+                    id="number"
+                    autocomplete="off"
+                    minlength="10"
+                    onkeypress="return isNumberKey(event)" 
+                    name="Number"
+                    type="tel"
+                  
+                  />
+                  <span id="num-error" class="text-danger"></span>
+                </div>
+              </div>
+              <div class="row mb-1">
                 <div class="col-md-4">
                   <label class="text-black">Email</label>
                   <input
@@ -463,26 +481,51 @@
                     autocomplete="off"
                     name="email"
                     type="email"
-                    required
+                   
                   />
                   <span id="mail-error" class="text-danger"></span>
                 </div>
-              </div>
-              <div class="row mb-4">
                 <div class="col-md-4">
-                  <label class="text-black row">Phone Number</label>
+                  <label class="text-black row">Password</label>
                   <input
                     class="form-control mt-2 rounded-4 in row"
-                    id="number"
+                    id="pass"
                     autocomplete="off"
-                    maxlength="10"
+                    minlength="8"
                     name="Number"
-                    type="tel"
-                    required
+                    type="password"
+                    onkeyup="passMan()"
+                    
                   />
-                  <span id="num-error" class="text-danger"></span>
+                  <span id="pass-error" class="text-danger row"></span>
+                  <span class="row text-warning">
+                    Password Must contain atleast
+                    <ul id="list">
+                      <li id="li1">1 Uppercase</li>
+                      <li id="li2">1 Special Character</li>
+                      <li id="li3">1 Number</li>
+                    </ul>
+                  </span>
                 </div>
                 <div class="col-md-4">
+                  <label class="text-black row">Confirm Password</label>
+                  <input
+                    class="form-control mt-2 rounded-4 in row"
+                    id="con-pass"
+                    autocomplete="off"
+                    minlength="8"
+                    name="Number"
+                    type="password"
+                    onkeyup="checkpass()"
+                  
+                  />
+                  <span id="conpass-error" class="text-danger"></span>
+                  <span id="passmatch" class="text-danger"></span>
+                </div>
+                
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
                   <label class="text-black row">Address</label>
                   <textarea
                     class="mt-2 rounded-4 row fb p-2"
@@ -490,11 +533,11 @@
                     autocomplete="off"
                     name="Address"
                     type="text"
-                     required
+                    
                   ></textarea>
-                  <span id="add-error"></span>
+                  <span id="add-error" class="text-danger"></span>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <label class="text-black row">Feedback</label>
                   <textarea
                     class="mt-2 rounded-4 row fb p-2"
@@ -502,9 +545,9 @@
                     autocomplete="off"
                     name="Feedback"
                     type="text"
-                    required
+                   
                   ></textarea>
-                  <span id="fb-error"></span>
+                  <span id="fb-error" class="text-danger"></span>
                 </div>
               </div>
 
