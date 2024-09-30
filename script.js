@@ -23,7 +23,7 @@ function isspch(str) {
 function checkpass() {
   const password = document.getElementById("pass").value;
   const conpass = document.getElementById("con-pass").value;
-  let passmatch = document.getElementById("passmatch");
+  const passmatch = document.getElementById("passmatch");
   if (password == conpass) {
     passmatch.textContent = "";
     return true;
@@ -34,6 +34,18 @@ function checkpass() {
   else{
     passmatch.textContent = "";
     return false;
+  }
+}
+function eachvalidate(inputid,spanid){
+  let val1 = document.getElementById(inputid).value;
+  let val2 = document.getElementById(spanid);
+  if (val1==""){
+    val2.textContent = "Please fill this"
+    return false
+  }
+  else{
+    val2.textContent = ""
+    return true
   }
 }
 function isNumberKey(evt) {
@@ -59,30 +71,70 @@ function hasUpperCase(str) {
   }
   return 0;
 }
+function mailman(){
+  const email = document.getElementById("email").value;
+  const mailError = document.getElementById("mail-error");
+  if(email.includes('@' && '.')){
+    mailError.textContent = ""
+  }
+  else{
+    mailError.textContent = "Please include @ ."
+  }
+}
+function passtoggle(pass,eye,sp){
+  const password = document.getElementById(pass);
+  const text = document.getElementById(sp)
+  if(password.type == 'text'){
+    password.type = 'password';
+  }
+  else{
+    password.type = 'text';
+  }
+  if(text.textContent == 'Show Password'){
+    text.textContent = 'Hide Password';
+  }
+  else{
+    text.textContent = 'Show Password';
+  }
+  if(document.getElementById(eye).src.endsWith("eye-slash.svg")){
+    document.getElementById(eye).src = "images/eye.svg"
+  }
+  else{
+    document.getElementById(eye).src = "images/eye-slash.svg"
+  }
+}
 function passMan() {
-  debugger;
   const password = document.getElementById("pass").value;
-  if (hasUpperCase(password)) {
-    document.getElementById("li1").style.color = "green";
-  } else {
-    document.getElementById("li1").style.color = "";
+  const passError = document.getElementById("pass-error");
+  const conpass = document.getElementById("con-pass").value;
+  const passmatch = document.getElementById("passmatch");
+
+  const hasUpper = hasUpperCase(password);
+  const hasSpecial = isspch(password);
+  const hasNumber = istr(password);
+  const isValidLength = password.length >= 8;
+  if (password == conpass) {
+    passmatch.textContent = "";
+  } else if(conpass!='') {
+    passmatch.textContent = "Did not match Password";
   }
-  if (isspch(password)) {
-    document.getElementById("li2").style.color = "green";
-  } else {
-    document.getElementById("li2").style.color = "";
+  else{
+    passmatch.textContent = "";
   }
-  if (istr(password)) {
-    document.getElementById("li3").style.color = "green";
-  } else {
-    document.getElementById("li3").style.color = "";
-  }
-  if (hasUpperCase(password) && isspch(password) && istr(password)) {
+
+  document.getElementById("li1").style.color = hasUpper ? "green" : "red";
+  document.getElementById("li2").style.color = hasSpecial ? "green" : "red";
+  document.getElementById("li3").style.color = hasNumber ? "green" : "red";
+
+  if (hasUpper && hasSpecial && hasNumber && isValidLength) {
+    passError.textContent = "";
     return true;
   } else {
+    passError.textContent = "Please fill password as per condition";
     return false;
   }
 }
+
 function validate() {
   const fname = document.getElementById("fname").value;
   const lname = document.getElementById("lname").value;
@@ -127,7 +179,7 @@ function validate() {
   if (
     fnameError.textContent == "" &&
     lnameError.textContent == "" &&
-    numberError.textContent == ""
+    numberError.textContent == "" 
   ) {
     return true;
   } else {

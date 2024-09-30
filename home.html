@@ -435,6 +435,7 @@
                     class="form-control mt-2 rounded-4 in row"
                     id="fname"
                     onkeypress="return isAlphaKey(event)"
+                    onkeyup="return eachvalidate('fname','fname-error')"
                     autocomplete="off"
                     maxlength="15"
                     name="fname"
@@ -449,6 +450,7 @@
                     class="form-control mt-2 rounded-4 in row"
                     id="lname"
                     onkeypress="return isAlphaKey(event)"
+                    onkeyup="return eachvalidate('lname','lname-error')"
                     autocomplete="off"
                     maxlength="15"
                     name="lname"
@@ -465,6 +467,7 @@
                     autocomplete="off"
                     minlength="10"
                     onkeypress="return isNumberKey(event)" 
+                    onkeyup="return eachvalidate('number','num-error')"
                     name="Number"
                     type="tel"
                   
@@ -477,6 +480,8 @@
                   <label class="text-black">Email</label>
                   <input
                     class="form-control mt-2 rounded-4 in row"
+                    onkeyup="return eachvalidate('email','mail-error')"
+                    onchange="return mailman()"
                     id="email"
                     autocomplete="off"
                     name="email"
@@ -491,16 +496,18 @@
                     class="form-control mt-2 rounded-4 in row"
                     id="pass"
                     autocomplete="off"
-                    minlength="8"
+                    maxlength="12"
                     name="Number"
                     type="password"
                     onkeyup="passMan()"
-                    
                   />
+                  <span class="row mt-2">
+                    <img class="col-md-2" id="eye1"  style="height: 20px;width: 40px;" src="images/eye-slash.svg" onclick="passtoggle('pass','eye1','sp1')"  alt="" />
+                    <p id="sp1" class="col-md-4 color">Show Password</p></span>
                   <span id="pass-error" class="text-danger row"></span>
                   <span class="row text-warning">
-                    Password Must contain atleast
-                    <ul id="list">
+                    Password Must contain character between 8-12 and atleast
+                    <ul id="list" class="ul">
                       <li id="li1">1 Uppercase</li>
                       <li id="li2">1 Special Character</li>
                       <li id="li3">1 Number</li>
@@ -513,14 +520,16 @@
                     class="form-control mt-2 rounded-4 in row"
                     id="con-pass"
                     autocomplete="off"
-                    minlength="8"
+                    manlength="12"
                     name="Number"
                     type="password"
                     onkeyup="checkpass()"
-                  
                   />
-                  <span id="conpass-error" class="text-danger"></span>
-                  <span id="passmatch" class="text-danger"></span>
+                  <span class="row mt-2">
+                    <img class="col-md-2" id="eye2"  style="height: 20px;width: 40px;" src="images/eye-slash.svg" onclick="passtoggle('con-pass','eye2','sp2')"  alt="" />
+                    <p id="sp2" class="col-md-4 color">Show Password</p></span>
+                  <span id="conpass-error" class="text-danger row"></span>
+                  <span id="passmatch" class="text-danger row"></span>
                 </div>
                 
               </div>
@@ -533,6 +542,8 @@
                     autocomplete="off"
                     name="Address"
                     type="text"
+                    onkeyup="return eachvalidate('address','add-error')"
+
                     
                   ></textarea>
                   <span id="add-error" class="text-danger"></span>
@@ -545,7 +556,8 @@
                     autocomplete="off"
                     name="Feedback"
                     type="text"
-                   
+                    onkeyup="return eachvalidate('feedback','fb-error')"
+
                   ></textarea>
                   <span id="fb-error" class="text-danger"></span>
                 </div>
