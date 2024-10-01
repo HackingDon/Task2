@@ -122,10 +122,13 @@ p{
   .ind{
     height: 30px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .ind1{
     height: 60px;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
   .cave{
     background: url(images/cave.jpg);
