@@ -104,6 +104,9 @@ p{
     bottom: -2px;
     left: 40%;
   }
+  .img2{
+    width: 600px;
+  }
   .btn-br{
     background-color: brown;
     color: white;
@@ -196,6 +199,11 @@ p{
       width: 400px;
     }
   }
+  @media (max-width:1200px){
+    .img2{
+      width: 350px;
+    }
+  }
   @media (min-width: 768px){
     .container-1{
       width: 680px;
@@ -244,5 +252,8 @@ p{
     }
     .nav-item{
       padding-left: 10px;
+    }
+    .img2{
+      width: 300px;
     }
   }
