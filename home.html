@@ -14,6 +14,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RV ParkIQ</title>
@@ -21,9 +22,9 @@
   <body>
     <div class="container-fluid">
       <div class="header-sec">
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-md">
           <div class="container-fluid">
-            <img class="col-2" src="images/img.png" alt="" />
+            <img class="img" src="images/img.png" alt="" />
             <button
               class="navbar-toggler"
               type="button"
@@ -36,7 +37,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 fs-7">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Market Data</a>
@@ -57,7 +58,7 @@
                   <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <button type="button" class="lo btn btn-success f-1">
+                  <button type="button" class="lo btn bg-gr fs-6">
                     LogIn/SignUp
                   </button>
                 </li>
@@ -86,7 +87,7 @@
             <div class="row mt-2 p-2 align-items-center">
               <input
                 type="text"
-                class="form-control-sm col-md-6"
+                class="form-control-sm col-md-6 m-0"
                 placeholder="Search our 222 products"
               />
               <div
@@ -98,7 +99,7 @@
               <div class="col-auto"></div>
               <button
                 type="submit"
-                class="cl btn btn-success col-lg-2 col-md-3"
+                class="cl btn bg-gr col-lg-2 col-md-3"
               >
                 Advanced search
               </button>
@@ -169,7 +170,7 @@
               <img src="images/img4.png" class="img2 row" />
               <div class="row justify-content-around mt-3">
                 <button class="btn btn-danger col-5">Try it for free</button>
-                <button class="btn btn-success col-5">Pricing</button>
+                <button class="btn bg-gr col-5">Pricing</button>
               </div>
             </div>
           </div>
@@ -190,10 +191,10 @@
             <button class="btn btn-outline-success mt-3">
               View All Listings
             </button>
-            <div class="row col-12 mt-3 gap-3 justify-content-around">
+            <div class="row col-12 mt-3 gap-3 justify-content-between">
               <div class="col-md-4 row">
                 <div class="fet1 col-lg-6 p-2">
-                  <button class="btn btn-success">RV and Campground</button>
+                  <button class="btn bg-gr">RV and Campground</button>
                   <button class="btn btn-br mt-2">Sale</button>
                 </div>
                 <div class="col-lg-6 p-3 border border-dark-subtle">
@@ -243,85 +244,164 @@
             <div
               class="d-flex flex-column justify-content-between mt-3 w-100 gap-3"
             >
-    <div class="row">           
-      <div id="carouselExampleIndicators" class="carousel slide col-md-8" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-        </ol>
-        
-        <div class="carousel-inner h-100">
-          <div class="carousel-item active h-100">
-            <div class="cave h-100 d-flex justify-content-center align-items-center">
-              <div class="content d-flex justify-content-center align-items-center">
-                <div class="p-3">
-                  <label class="fs-12 bg-gr p-1">Recent Transactions</label>
-                  <h5 class="mt-3">BLUE WATER ACQUIRES ENDLESS CAVERNS IN S..</h5>
-                  <p class="fs-12">
-                    Ocean city MD-based outdoor hospitality specialist, Blue water, continues its rapid expansion with the recent
-                    acquisition of endless caverns. Located on 265 acres in the Shenandoah valley against the breathtaking backdrop
-                    of the Massanutten Mountains...
-                  </p>
-                  <div class="d-flex">
-                    <img class="img1 p-1" src="images/calendar.svg" alt="" />
-                    <p class="fs-12 color">June 6, 2022</p>
+              <div class="row">
+                <div
+                  id="carouselExampleIndicators"
+                  class="carousel slide col-md-8"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                      <div
+                        class="cave h-100 d-flex justify-content-center align-items-center"
+                      >
+                        <div
+                          class="content d-flex justify-content-center align-items-center"
+                        >
+                          <div class="p-3 ms-5">
+                            <label class="fs-12 bg-gr p-1"
+                              >Recent Transactions</label
+                            >
+                            <h5 class="mt-3">
+                              BLUE WATER ACQUIRES ENDLESS CAVERNS IN S..
+                            </h5>
+                            <p class="fs-12">
+                              Ocean City, MD-based outdoor hospitality
+                              specialist, Blue Water, continues its rapid
+                              expansion with the recent acquisition of Endless
+                              Caverns. Located on 265 acres in the Shenandoah
+                              Valley against the breathtaking backdrop of the
+                              Massanutten Mountains...
+                            </p>
+                            <div class="d-flex">
+                              <img
+                                class="img1 p-1"
+                                src="images/calendar.svg"
+                                alt="Calendar icon"
+                              />
+                              <p class="fs-12 color">June 6, 2022</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item h-100">
+                      <div
+                        class="cave h-100 d-flex justify-content-center align-items-center"
+                      >
+                        <div
+                          class="content d-flex justify-content-center align-items-center"
+                        >
+                          <div class="p-3 ms-5">
+                            <label class="fs-12 bg-gr p-1"
+                              >Recent Transactions</label
+                            >
+                            <h5 class="mt-3">
+                              BLUE WATER EXPANDS INTO THE MOUNTAINS
+                            </h5>
+                            <p class="fs-12">
+                              Continuing its growth, Blue Water has announced a
+                              new property acquisition in the scenic area of the
+                              Appalachian Mountains, enhancing its portfolio in
+                              outdoor hospitality.
+                            </p>
+                            <div class="d-flex">
+                              <img
+                                class="img1 p-1"
+                                src="images/calendar.svg"
+                                alt="Calendar icon"
+                              />
+                              <p class="fs-12 color">July 10, 2023</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item h-100">
+                      <div
+                        class="cave h-100 d-flex justify-content-center align-items-center"
+                      >
+                        <div
+                          class="content d-flex justify-content-center align-items-center"
+                        >
+                          <div class="p-3 ms-5">
+                            <label class="fs-12 bg-gr p-1"
+                              >Recent Transactions</label
+                            >
+                            <h5 class="mt-3">
+                              BLUE WATER PARTNERS WITH LOCAL BUSINESSES
+                            </h5>
+                            <p class="fs-12">
+                              In an effort to enhance guest experiences, Blue
+                              Water has formed partnerships with several local
+                              businesses, providing unique offerings and
+                              attractions for visitors.
+                            </p>
+                            <div class="d-flex">
+                              <img
+                                class="img1 p-1"
+                                src="images/calendar.svg"
+                                alt="Calendar icon"
+                              />
+                              <p class="fs-12 color">August 15, 2023</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-item h-100">
-            <div class="cave h-100 d-flex justify-content-center align-items-center">
-              <div class="content d-flex justify-content-center align-items-center">
-                <div class="p-3">
-                  <label class="fs-12 bg-gr p-1">Recent Transactions</label>
-                  <h5 class="mt-3">BLUE WATER ACQUIRES ENDLESS CAVERNS IN S..</h5>
-                  <p class="fs-12">
-                    Ocean city MD-based outdoor hospitality specialist, Blue water, continues its rapid expansion with the recent
-                    acquisition of endless caverns. Located on 265 acres in the Shenandoah valley against the breathtaking backdrop
-                    of the Massanutten Mountains...
-                  </p>
-                  <div class="d-flex">
-                    <img class="img1 p-1" src="images/calendar.svg" alt="" />
-                    <p class="fs-12 color">June 6, 2022</p>
+
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
                   </div>
+
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </a>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-item h-100">
-            <div class="cave h-100 d-flex justify-content-center align-items-center">
-              <div class="content d-flex justify-content-center align-items-center">
-                <div class="p-3">
-                  <label class="fs-12 bg-gr p-1">Recent Transactions</label>
-                  <h5 class="mt-3">BLUE WATER ACQUIRES ENDLESS CAVERNS IN S..</h5>
-                  <p class="fs-12">
-                    Ocean city MD-based outdoor hospitality specialist, Blue water, continues its rapid expansion with the recent
-                    acquisition of endless caverns. Located on 265 acres in the Shenandoah valley against the breathtaking backdrop
-                    of the Massanutten Mountains...
-                  </p>
-                  <div class="d-flex">
-                    <img class="img1 p-1" src="images/calendar.svg" alt="" />
-                    <p class="fs-12 color">June 6, 2022</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only"></span>
-        </a>
-      </div>
+
                 <div class="d-flex flex-column gap-3 col-md-4">
                   <div class="cl border border-dark-subtle p-3">
                     <label class="fs-12 bg-danger p-1">Development news</label>
@@ -468,7 +548,7 @@
           </div>
         </div>
       </div>
-      <div class="w-100 bg-gr mt-5 text-white pb-3 pt-1">
+      <div id="footer" class="w-100 bg-gr mt-5 text-white pb-3 pt-1">
         <div class="container mt-5 d-flex flex-column align-items-center">
           <h1 class="tc">SUBSCRIBE TO OUR NEWSLETTER</h1>
           <p class="tc">
@@ -489,7 +569,6 @@
                     maxlength="15"
                     name="fname"
                     type="text"
-                  
                   />
                   <span id="fname-error" class="text-danger"></span>
                 </div>
@@ -504,7 +583,6 @@
                     maxlength="15"
                     name="lname"
                     type="text"
-                  
                   />
                   <span id="lname-error" class="text-danger"></span>
                 </div>
@@ -515,11 +593,10 @@
                     id="number"
                     autocomplete="off"
                     minlength="10"
-                    onkeypress="return isNumberKey(event)" 
+                    onkeypress="return isNumberKey(event)"
                     onkeyup="return eachvalidate('number','num-error')"
                     name="Number"
                     type="tel"
-                  
                   />
                   <span id="num-error" class="text-danger"></span>
                 </div>
@@ -535,7 +612,6 @@
                     autocomplete="off"
                     name="email"
                     type="email"
-                   
                   />
                   <span id="mail-error" class="text-danger"></span>
                 </div>
@@ -551,8 +627,16 @@
                     onkeyup="passMan()"
                   />
                   <span class="row mt-2">
-                    <img class="col-md-2" id="eye1"  style="height: 20px;width: 40px;" src="images/eye-slash.svg" onclick="passtoggle('pass','eye1','sp1')"  alt="" />
-                    <p id="sp1" class="col-md-4 color">Show Password</p></span>
+                    <img
+                      class="col-md-2"
+                      id="eye1"
+                      style="height: 20px; width: 40px"
+                      src="images/eye-slash.svg"
+                      onclick="passtoggle('pass','eye1','sp1')"
+                      alt=""
+                    />
+                    <p id="sp1" class="col-md-4 color">Show Password</p></span
+                  >
                   <span id="pass-error" class="text-danger row"></span>
                   <span class="row text-warning">
                     Password Must contain character between 8-12 and atleast
@@ -575,12 +659,19 @@
                     onkeyup="checkpass()"
                   />
                   <span class="row mt-2">
-                    <img class="col-md-2" id="eye2"  style="height: 20px;width: 40px;" src="images/eye-slash.svg" onclick="passtoggle('con-pass','eye2','sp2')"  alt="" />
-                    <p id="sp2" class="col-md-4 color">Show Password</p></span>
+                    <img
+                      class="col-md-2"
+                      id="eye2"
+                      style="height: 20px; width: 40px"
+                      src="images/eye-slash.svg"
+                      onclick="passtoggle('con-pass','eye2','sp2')"
+                      alt=""
+                    />
+                    <p id="sp2" class="col-md-4 color">Show Password</p></span
+                  >
                   <span id="conpass-error" class="text-danger row"></span>
                   <span id="passmatch" class="text-danger row"></span>
                 </div>
-                
               </div>
               <div class="row mb-4">
                 <div class="col-md-6">
@@ -592,8 +683,6 @@
                     name="Address"
                     type="text"
                     onkeyup="return eachvalidate('address','add-error')"
-
-                    
                   ></textarea>
                   <span id="add-error" class="text-danger"></span>
                 </div>
@@ -606,7 +695,6 @@
                     name="Feedback"
                     type="text"
                     onkeyup="return eachvalidate('feedback','fb-error')"
-
                   ></textarea>
                   <span id="fb-error" class="text-danger"></span>
                 </div>
@@ -620,7 +708,7 @@
             </div>
           </form>
           <div class="row justify-content-between w-100">
-            <div class="col-md-4 mt-3">
+            <div class="col-md-4 mt-3 p-0">
               <h4>CONTACT US</h4>
               <div class="hr"></div>
               <div class="d-flex flex-column gap-3 mt-3 align-items-start">
@@ -669,7 +757,7 @@
                 <a href="#" class="call"><li class="mt-2">About Us</li></a>
               </ul>
             </div>
-            <div class="col-md-4 mt-3">
+            <div class="col-md-4 mt-3 pe-0">
               <h4>NEW PROPERTIES</h4>
               <div class="hr"></div>
               <div class="d-flex mt-3 gap-2">
@@ -708,11 +796,38 @@
           </div>
         </div>
       </div>
-      <div
-        class="end w-100 d-flex justify-content-center align-items-center bg-success text-white"
-      >
-        <p class="fw-semibold">Copyright <img class="mb-1" style="height: 17px;width: 20px;" src="images/copy.svg" alt="">2024 Aggregate Intelligence, Inc. All Rights Reserved.</p>
+        <div
+          class="end w-100 d-flex justify-content-center align-items-center bg-success text-white"
+        >
+          <p class="fw-semibold">
+            Copyright
+            <img
+              class="mb-1"
+              style="height: 17px; width: 20px"
+              src="images/copy.svg"
+              alt=""
+            />2024 Aggregate Intelligence, Inc. All Rights Reserved.
+          </p>
+        </div>
       </div>
-    </div>
+    <!-- <script>
+      $(document).ready(function () {
+        $("html").hover(function () {
+          $(".header-sec").fadeIn(1000);
+        });
+        $(".header-sec" || ".navbar  ").hover(function () {
+          $(".second-sec").fadeIn(1000);
+        });
+        $(".second-sec" || ".header-sec").hover(function () {
+          $(".body-sec").fadeIn(1000);
+        });
+        $(".body-sec").hover(function () {
+          $("#footer").fadeIn(1000);
+        });
+        $("#footer").hover(function () {
+          $("#end").fadeIn(500);
+        });
+      });
+    </script> -->
   </body>
 </html>

@@ -1,10 +1,10 @@
+html body {
+  font-family: sans-serif;
+}
 .container-fluid{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.f-1{
-  font-size: 0.875rem;
 }
 .header-sec{
     background: url(images/bgimg.png);
@@ -29,7 +29,7 @@
   transform: scaleX(1);
 }
 .color{
-    color: #94c75e;
+    color: rgb(151,203,95);
 }  
 .w-100{
     width: 100%;
@@ -49,6 +49,7 @@ p{
 .second-sec{
     width: 100%;
     height: 60%;
+    /* display: none; */
 }
 .container{
     height: 100%;
@@ -62,10 +63,12 @@ p{
     height: 20px;
     width: 20px;
 }
-
-.body-con{
-    width: 650px;
-}
+/* .body-sec,
+.header-sec,
+#end,
+#footer{
+  display: none;
+} */
 .fet1{
     background: url(images/holt.jpg);
     background-size: 100% 100%;
@@ -142,8 +145,14 @@ p{
     color: white;
     border-radius: 3px;
   }
+  .btn-gr{
+    background-color: rgb(1,137,10);
+    color: #fff;
+  }
   .bg-gr{
-    background-color: #94c75e;
+    background-color: rgb(151,203,95);
+    color: #fff;
+
   }
   .bg-mr{
     background-color: lightsalmon;
@@ -239,6 +248,12 @@ p{
     .fet3,
     .fet4{
       height: 200px;
+    }
+    .img{
+      width: 140px;
+    }
+    .fs-7{
+      font-size: 0.875rem;
     }
   }
   @media (max-width:576px){
