@@ -138,6 +138,14 @@ p{
     background: url(images/cave.jpg);
     background-size: 100% 100%;
   }
+  .cave1{
+    background: url(images/refores.jpeg);
+    background-size: 100% 100%;
+  }
+  .cave2{
+    background: url(images/campground.jpeg);
+    background-size: 100% 100%;
+  }
   .fs-12,
   p{
     font-size: 14px;
