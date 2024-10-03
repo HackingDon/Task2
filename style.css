@@ -9,6 +9,7 @@ html body {
 .header-sec{
     background: url(images/bgimg.png);
     background-size: 100% 100%;
+    
 } 
 .nav-link{
   position: relative;
@@ -49,6 +50,7 @@ p{
 .second-sec{
     width: 100%;
     height: 60%;
+    animation: 1s ease-out 0s 1 xload ;
     display: none;
 }
 .container{
@@ -65,10 +67,10 @@ p{
 }
 .body-sec,
 .header-sec,
-.second-sec,
 #end,
 #footer{
   display: none;
+  animation: 1s ease-out 0s 1 yload ;
 }
 .fet1{
     background: url(images/holt.jpg);
@@ -282,5 +284,21 @@ p{
     }
     .img2{
       width: 300px;
+    }
+  }
+  @keyframes xload{
+    0%{
+      transform: translateX(-40%);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  @keyframes yload{
+    0%{
+      transform: translateY(-40%);
+    }
+    100%{
+      transform: translateY(0);
     }
   }
